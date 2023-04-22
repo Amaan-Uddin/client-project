@@ -25,6 +25,7 @@
 
 body{
     overflow-x: hidden;
+    background-color: var(--main);
 }
 
 ul,li{
@@ -112,3 +113,144 @@ img{
 .carousel-btn.next{
     right: 4rem;
 }
+
+/* -----------------------------info------------------------------ */
+
+section:has(div.container){
+    padding: 7rem 0;
+}
+
+.info{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3.25rem;
+}
+
+
+.sub-heading{
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: .8rem;
+    color: var(--text);
+    padding: .13rem .75rem;
+    margin-bottom: 1rem;
+    border-left: 3px solid var(--text-primary);
+}
+
+.heading{
+    font-family: "Abril Fatface",cursive;
+    color: var(--text);
+    font-size: 2.75rem;
+    letter-spacing: 1px;
+    margin-bottom: 2.5rem;
+}
+
+.text{
+    padding: 0 11rem;    
+}
+
+.hl-text{
+    color: var(--text-primary);
+    font-size: .8rem;
+    margin-bottom: 1.75rem;
+    position: relative;
+}
+.hl-text::before{
+    content: "";
+    position: absolute;
+    width: 10rem;
+    height: 1px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -11rem;
+    background-color: var(--text-primary);
+}
+
+.mn-text{
+    color: var(--text-secondary);
+    font-size: .8rem;
+    line-height: 1.7rem;
+}
+
+.info-cards{
+    display: flex;
+    width: 100%;
+    gap: 3rem;
+}
+
+.info-card:nth-child(1){
+    background-image: url("/utility/assets/images/slide-img1.jpg");
+}
+.info-card:nth-child(2){
+    background-image: url("/utility/assets/images/slide-img2.jpg");
+}
+.info-card:nth-child(3){
+    background-image: url("/utility/assets/images/slide-img3.jpg");
+}
+
+.info-card{
+    flex: 1;
+    background-size: cover;
+    border-radius: .5rem;
+    padding: 11.5rem 0 0;
+    overflow: hidden;
+
+    transition: transform 500ms ease;
+}
+
+.info-card:hover{
+    transform: scale(1.05);
+}
+
+.card-content{
+    padding: 1.5rem;
+    background: linear-gradient(
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0.3) 20%,
+        rgb(0, 0, 0)
+    );
+    display: flex;
+    flex-direction: column;
+    transform: translateY(62%);
+    transition: transform 500ms ease;
+}
+
+.info-card:hover .card-content{
+    transform: translateY(0);
+    transition-delay: 500ms;
+}
+
+.heading.card-title{
+    font-size: 1.75rem;
+    margin-bottom: .85rem;
+    position: relative;
+    padding-bottom: .275rem;
+    width: max-content;
+}
+
+.heading.card-title::after{
+    content: "";
+    position: absolute;
+    height: 3px;
+    bottom: 0;
+    left: calc(1.5rem * -1);
+    background-color: var(--text-primary);
+    width: calc(100% + 1.5rem);
+
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 500ms ease;
+}
+
+.info-card:hover .heading.heading.card-title::after{
+    transform: scaleX(1);
+}
+
+.card-body{
+    color: whitesmoke;
+    font-size: .875rem;
+}
+
