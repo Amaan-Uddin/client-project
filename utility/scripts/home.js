@@ -36,3 +36,16 @@ let autoSlide = setInterval(() => {
         clearInterval(autoSlide)
     }
 },3000)
+
+
+const swiper = new Swiper('.swiper', {
+    loop: true,
+    autoplay: true,
+    speed: 500,
+  
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },  
+});

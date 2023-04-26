@@ -254,3 +254,26 @@ section:has(div.container){
     font-size: .875rem;
 }
 
+/* -------------------------testimonial--------------------------- */
+
+.swiper-slide{
+    display: flex;
+    gap: 1.75rem;
+    background-color: white;
+}
+
+.slider-wrapper{
+    background-color: white;
+}
+
+.swiper-pagination{
+    width: 1rem;
+    height: 1rem;
+}
+
+
+
+/* 
+.swiper-pagination-bullet{
+    color: pink;
+} */
